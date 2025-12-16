@@ -1,9 +1,16 @@
-/* --- 1. GÉNÉRAL ET TYPOGRAPHIE --- */
+/* --- 1. VARIABLES DE COULEUR ET TYPOGRAPHIE (Thème Aurore Boréale) --- */
 :root {
-    --primary-color: #0077B5; /* Bleu LinkedIn/Propre */
-    --secondary-color: #333;
-    --background-light: #F4F7F6;
-    --text-color: #444;
+    /* Couleurs principales */
+    --white-pure: #FFFFFF;
+    --background-light: #F8F8FF; /* Blanc cassé / Lavande très douce */
+    --primary-blue: #0077B5;    /* Bleu Professionnel (LinkedIn) */
+    --secondary-violet: #8A2BE2; /* Violet Doux (BlueViolet) */
+    --text-dark: #333333;
+
+    /* Dégradé Dynamique (Aurore Boréale) */
+    --aurora-gradient: linear-gradient(135deg, #0077B5 0%, #8A2BE2 100%);
+    --aurora-bg: linear-gradient(90deg, #F8F8FF, #FFFFFF, #F8F8FF);
+    
     --font-family: 'Arial', sans-serif;
 }
 
@@ -16,40 +23,51 @@
 body {
     font-family: var(--font-family);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: white;
+    color: var(--text-dark);
+    background-color: var(--white-pure);
 }
 
 h1, h2, h3 {
-    color: var(--secondary-color);
+    color: var(--text-dark);
     margin-bottom: 0.5em;
 }
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--primary-blue);
+    transition: color 0.3s;
 }
 
 /* --- 2. LAYOUT ET STRUCTURE --- */
 main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     margin-bottom: 40px;
     background-color: var(--background-light);
-    border-radius: 8px;
+    border-radius: 12px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Ombre légère */
 }
 
 /* --- 3. NAVIGATION --- */
 nav {
-    background: var(--secondary-color);
+    background: var(--secondary-violet);
     padding: 10px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Style appliqué par le JavaScript au scroll */
+nav.scrolled {
+    background-color: rgba(138, 43, 226, 0.95); /* Violet semi-transparent au scroll */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav ul {
@@ -59,212 +77,296 @@ nav ul {
 }
 
 nav ul li a {
-    color: white;
-    padding: 10px 15px;
+    color: var(--white-pure);
+    padding: 10px 18px;
     display: block;
-    transition: background-color 0.3s;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- 4. SECTION HÉRO (ACCUEIL) --- */
+/* --- 4. SECTION HÉRO (ACCUEIL) : Utilisation du Dégradé Aurore Boréale --- */
 .hero {
-    background: var(--primary-color);
-    color: white;
-    padding: 100px 20px;
+    background: var(--aurora-gradient); /* Utilisation du dégradé */
+    color: var(--white-pure);
+    padding: 120px 20px;
     text-align: center;
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Bord inférieur doux */
 }
 
 .hero h1 {
-    color: white;
-    font-size: 3em;
+    color: var(--white-pure);
+    font-size: 3.5em;
+    font-weight: 700;
 }
 
 .hero h2 {
-    color: #CCE5FF; /* Bleu clair */
-    font-size: 1.5em;
+    color: #E6E6FA; /* Lilas clair pour le contraste */
+    font-size: 1.6em;
     font-weight: 300;
+    margin-bottom: 20px;
 }
 
-/* --- 5. BOUTONS --- */
+/* --- 5. BOUTONS (Bicolores) --- */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     margin: 10px 10px 0 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 30px; /* Boutons arrondis */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .primary-btn {
-    background-color: white;
-    color: var(--primary-color);
-    border: 2px solid white;
+    background-color: var(--white-pure);
+    color: var(--primary-blue);
+    border: 2px solid var(--white-pure);
 }
 
 .primary-btn:hover {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--primary-blue);
+    color: var(--white-pure);
+    box-shadow: 0 4px 10px rgba(0, 119, 181, 0.5);
+    transform: translateY(-2px);
 }
 
 .secondary-btn {
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: var(--white-pure);
+    border: 2px solid var(--white-pure);
 }
 
 .secondary-btn:hover {
-    background-color: white;
-    color: var(--primary-color);
+    background-color: var(--white-pure);
+    color: var(--primary-blue);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 
 /* --- 6. SECTION À PROPOS --- */
 .bio-container {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 900px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
+    padding: 0 20px;
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 5px solid var(--primary-color);
+    margin-bottom: 25px;
+    /* Cercle lumineux (Aurore) autour de la photo */
+    border: 6px solid var(--secondary-violet); 
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); 
 }
 
 
 /* --- 7. COMPÉTENCES (SKILLS) --- */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
     max-width: 1000px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
 .skill-card {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    background: var(--white-pure);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue); /* Bordure colorée */
+    transition: all 0.3s ease-in-out;
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(138, 43, 226, 0.2); /* Ombre violette au survol */
 }
 
 .skill-card i {
-    font-size: 2.5em;
-    color: var(--primary-color);
+    font-size: 3em;
+    background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--secondary-violet));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Icônes en dégradé */
     margin-bottom: 10px;
+}
+.skill-card h4 {
+    color: var(--text-dark);
 }
 
 
 /* --- 8. PROJETS --- */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
     margin-top: 30px;
     max-width: 1200px;
     margin: 30px auto;
 }
 
 .project-card {
-    background: white;
-    border-radius: 8px;
+    background: var(--white-pure);
+    border-radius: 10px;
     overflow: hidden;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.2);
 }
 
 .project-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.project-card:hover img {
+    opacity: 0.85;
 }
 
 .project-card h4 {
-    padding: 15px 15px 0;
+    padding: 15px 15px 5px;
     margin-top: 0;
-    color: var(--primary-color);
+    color: var(--secondary-violet);
+    font-size: 1.3em;
 }
 
 .project-card p {
     padding: 0 15px;
-    font-size: 0.9em;
+    font-size: 0.95em;
+    color: var(--text-dark);
 }
 
 .project-link {
     display: inline-block;
     margin: 10px 15px 15px 15px;
     font-size: 0.9em;
+    font-weight: bold;
+    color: var(--primary-blue);
+}
+
+.project-link i {
+    margin-right: 5px;
 }
 
 .technologies {
     font-style: italic;
     color: #777;
+    margin-top: 10px;
+    padding: 0 15px;
+    font-size: 0.85em;
 }
 
-/* --- 9. FOOTER & CONTACT --- */
+
+/* --- 9. EXPÉRIENCE ET FORMATION (Timeline) --- */
+.timeline {
+    max-width: 800px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.timeline-item {
+    border-left: 3px solid var(--secondary-violet);
+    padding: 10px 0 25px 20px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary-blue);
+    border: 2px solid var(--white-pure);
+}
+
+.timeline-item h4 {
+    color: var(--primary-blue);
+    margin-top: 0;
+}
+
+.timeline-item .date {
+    font-style: italic;
+    color: var(--secondary-violet);
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+
+/* --- 10. FOOTER & CONTACT --- */
 footer {
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--secondary-violet);
+    color: var(--white-pure);
     text-align: center;
     padding: 40px 20px;
 }
 
+footer h3 {
+    color: var(--white-pure);
+}
+
 .social-links a {
-    color: white;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: var(--white-pure);
+    margin: 0 15px;
+    transition: color 0.3s, transform 0.2s;
 }
 
 .social-links a:hover {
-    color: var(--primary-color);
+    color: var(--primary-blue);
+    transform: scale(1.1);
 }
 
-/* --- 10. RESPONSIVE (Mobile First) --- */
+/* --- 11. RESPONSIVE (Mobile First) --- */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5em;
     }
     
     .hero h2 {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur mobile */
+        padding: 0 10px;
     }
     
     nav ul li a {
-        text-align: center;
+        padding: 8px 10px;
+        font-size: 0.9em;
     }
 
     .section {
         padding: 40px 15px;
     }
-}
-/* --- CSS Supplémentaire pour le JavaScript --- */
-
-/* La barre de navigation par défaut est déjà dans style.css */
-
-/* Style appliqué lorsque la classe 'scrolled' est ajoutée par le JS */
-nav.scrolled {
-    background-color: rgba(51, 51, 51, 0.95); /* Rendre la barre semi-transparente ou différente */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+    .timeline-item {
+        margin-left: 5px;
+    }
 }
