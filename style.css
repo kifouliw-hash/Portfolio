@@ -259,3 +259,12 @@ footer {
         padding: 40px 15px;
     }
 }
+/* --- CSS Supplémentaire pour le JavaScript --- */
+
+/* La barre de navigation par défaut est déjà dans style.css */
+
+/* Style appliqué lorsque la classe 'scrolled' est ajoutée par le JS */
+nav.scrolled {
+    background-color: rgba(51, 51, 51, 0.95); /* Rendre la barre semi-transparente ou différente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
