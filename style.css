@@ -9,7 +9,6 @@
 
     /* Dégradé Dynamique (Aurore Boréale) */
     --aurora-gradient: linear-gradient(135deg, #0077B5 0%, #8A2BE2 100%);
-    --aurora-bg: linear-gradient(90deg, #F8F8FF, #FFFFFF, #F8F8FF);
     
     --font-family: 'Arial', sans-serif;
 }
@@ -64,7 +63,7 @@ nav {
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Style appliqué par le JavaScript au scroll */
+/* Style appliqué par le JavaScript au scroll (dans script.js) */
 nav.scrolled {
     background-color: rgba(138, 43, 226, 0.95); /* Violet semi-transparent au scroll */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -98,7 +97,8 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); /* Bord inférieur doux */
+    /* Bord inférieur doux */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); 
 }
 
 .hero h1 {
@@ -175,7 +175,6 @@ nav ul li a:hover {
     box-shadow: 0 0 15px rgba(138, 43, 226, 0.5); 
 }
 
-
 /* --- 7. COMPÉTENCES (SKILLS) --- */
 .skills-grid {
     display: grid;
@@ -201,9 +200,10 @@ nav ul li a:hover {
 
 .skill-card i {
     font-size: 3em;
+    /* Icônes en dégradé */
     background: -webkit-linear-gradient(45deg, var(--primary-blue), var(--secondary-violet));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; /* Icônes en dégradé */
+    -webkit-text-fill-color: transparent; 
     margin-bottom: 10px;
 }
 .skill-card h4 {
@@ -271,14 +271,20 @@ nav ul li a:hover {
     margin-right: 5px;
 }
 
+/* MODIFICATION ICI : Style pour les descriptions de technologies (ton humain) */
 .technologies {
-    font-style: italic;
+    font-style: normal; 
+    font-weight: 500;
     color: #777;
     margin-top: 10px;
     padding: 0 15px;
     font-size: 0.85em;
 }
 
+/* Style pour l'icône de l'outil VBA */
+.project-card .fa-microchip {
+    color: var(--secondary-violet) !important;
+}
 
 /* --- 9. EXPÉRIENCE ET FORMATION (Timeline) --- */
 .timeline {
@@ -317,6 +323,15 @@ nav ul li a:hover {
     font-size: 0.9em;
     margin-bottom: 5px;
 }
+/* Style pour les listes d'expérience (plus propre) */
+.timeline-item ul {
+    list-style: disc;
+    margin: 5px 0 0 20px;
+    padding-left: 0;
+}
+.timeline-item li {
+    margin-bottom: 5px;
+}
 
 
 /* --- 10. FOOTER & CONTACT --- */
@@ -353,7 +368,7 @@ footer h3 {
     }
 
     nav ul {
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne sur mobile */
+        flex-wrap: wrap; 
         padding: 0 10px;
     }
     
@@ -368,5 +383,9 @@ footer h3 {
     
     .timeline-item {
         margin-left: 5px;
+    }
+
+    .projects-grid {
+        gap: 30px;
     }
 }
