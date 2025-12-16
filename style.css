@@ -213,14 +213,16 @@ nav ul li a:hover {
 
 /* --- 8. PROJETS --- */
 .projects-grid {
+    /* REMPLACER CE BLOC DANS STYLE.CSS */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* La clé est ici : ajuster minmax pour permettre plus d'éléments par ligne */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 40px;
     margin-top: 30px;
     max-width: 1200px;
     margin: 30px auto;
 }
-
+/* Le reste du CSS pour les projets reste inchangé */
 .project-card {
     background: var(--white-pure);
     border-radius: 10px;
