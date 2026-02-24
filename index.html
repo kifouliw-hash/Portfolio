@@ -9,13 +9,13 @@
 </head>
 <body>
 
-    <!-- HERO -->
     <header id="accueil" class="hero">
+        <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
             <p class="hero-label">👋 Bonjour, je suis</p>
             <h1>Williams Kifouli</h1>
             <h2>Digital Projects Manager · IA & Automatisation · Entrepreneur</h2>
-            <p>Je transforme des processus complexes en outils simples et puissants — en combinant IA générative, automatisation et sens du business pour créer un impact mesurable.</p>
+            <p class="hero-desc">Je transforme des processus complexes en outils simples et puissants — en combinant IA générative, automatisation et sens du business pour créer un impact mesurable.</p>
             <div class="hero-cta">
                 <a href="#projets" class="btn primary-btn">Voir mes réalisations</a>
                 <a href="#contact" class="btn secondary-btn">Me contacter</a>
@@ -39,13 +39,13 @@
         </div>
     </header>
 
-    <!-- NAVIGATION -->
     <nav>
         <ul>
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#apropos">À Propos</a></li>
             <li><a href="#competences">Compétences</a></li>
             <li><a href="#projets">Projets</a></li>
+            <li><a href="#resultats">Résultats</a></li>
             <li><a href="#experience">Parcours</a></li>
         </ul>
     </nav>
@@ -55,43 +55,52 @@
         <!-- À PROPOS -->
         <section id="apropos" class="section">
             <h3>À Propos</h3>
-            <div class="bio-container">
-                <img src="photo-profil.jpg" alt="Photo de Williams Kifouli" class="profile-pic">
-                <div class="bio-text">
-                    <p class="bio-intro">Je ne suis pas développeur au sens classique du terme — et c'est précisément ce qui fait ma force.</p>
-                    <p>Mon approche, c'est d'utiliser l'IA comme un levier : je comprends les contraintes métier, j'identifie les frictions, et je construis des solutions concrètes — chatbots, automatisations, outils de reporting — qui font vraiment gagner du temps.</p>
-                    <p>En alternance chez SOGAL, j'ai réduit le temps de traitement des commandes de 15 minutes à 2, formé 19 collaborateurs sur un assistant IA maison, et supprimé des erreurs de saisie qui coûtaient des heures chaque semaine. En parallèle, je développe des projets entrepreneuriaux (SpiritPay, MyMír, KwikSend) sur des problématiques réelles que j'ai vécues ou observées.</p>
-                    <p>Je cherche un environnement où l'initiative est valorisée, où on peut tester, échouer, améliorer — et où la technologie est au service des gens, pas l'inverse.</p>
-                    <div class="bio-tags">
+            <div class="about-grid">
+                <div class="about-photo-col">
+                    <img src="photo-profil.jpg" alt="Williams Kifouli" class="profile-pic">
+                    <div class="about-info-pills">
+                        <span><i class="fas fa-map-marker-alt"></i> Angers, France</span>
+                        <span><i class="fas fa-car"></i> Permis B</span>
+                        <span><i class="fas fa-language"></i> FR · EN (B1)</span>
+                    </div>
+                </div>
+                <div class="about-text-col">
+                    <p class="about-hook">Je ne suis pas développeur au sens classique — et c'est précisément ce qui fait ma force.</p>
+                    <p>Mon approche, c'est d'utiliser l'IA comme levier : je comprends les contraintes métier, j'identifie les frictions, et je construis des solutions concrètes — chatbots, automatisations, outils de reporting — qui font vraiment gagner du temps.</p>
+                    <p>En alternance chez SOGAL, j'ai réduit le temps de traitement des commandes de 15 min à 2, formé 19 collaborateurs sur un assistant IA, et supprimé des erreurs de saisie qui coûtaient des heures chaque semaine. En parallèle, je développe des projets entrepreneuriaux sur des problématiques réelles (SpiritPay, MyMír, KwikSend).</p>
+                    <p>Je cherche un environnement où l'initiative est valorisée, où on peut tester, améliorer — et où la technologie est au service des gens, pas l'inverse.</p>
+                    <div class="about-tags">
                         <span class="tag">IA Générative</span>
-                        <span class="tag">Automatisation</span>
-                        <span class="tag">Power Platform</span>
+                        <span class="tag">Power Automate</span>
+                        <span class="tag">VBA Excel</span>
+                        <span class="tag">Copilot Studio</span>
                         <span class="tag">FinTech</span>
-                        <span class="tag">VBA & Excel</span>
                         <span class="tag">Gestion de projet</span>
+                        <span class="tag">React · Node.js</span>
+                        <span class="tag">Flutter</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- COMPÉTENCES -->
+        <!-- COMPÉTENCES + SOFT SKILLS -->
         <section id="competences" class="section">
             <h3>Domaines d'Expertise</h3>
             <div class="skills-grid">
                 <div class="skill-card">
                     <i class="fas fa-robot"></i>
                     <h4>IA & Automatisation</h4>
-                    <p>Copilot Studio, IA générative, Power Automate, AI Builder, chatbots métier. Je déploie des solutions IA concrètes, pas des demos.</p>
+                    <p>Copilot Studio, IA générative, Power Automate, AI Builder, chatbots métier. Des solutions déployées et adoptées par les équipes.</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-table"></i>
-                    <h4>VBA & Data Engineering</h4>
+                    <h4>VBA & Data</h4>
                     <p>Moteurs VBA avancés, PowerQuery, harmonisation de données multi-formats. Des outils robustes qui tournent sans moi après livraison.</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-code"></i>
                     <h4>Développement IA-assisté</h4>
-                    <p>React, Node.js, Flutter, Next.js — co-développés avec l'IA (Cursor, Claude). Je livre des produits fonctionnels sans équipe technique.</p>
+                    <p>React, Node.js, Flutter, Next.js — co-développés avec l'IA. Je livre des produits fonctionnels sans équipe technique dédiée.</p>
                 </div>
                 <div class="skill-card">
                     <i class="fas fa-chart-line"></i>
@@ -99,13 +108,43 @@
                     <p>KPI, reporting, tableaux de bord automatisés, GANTT. Je mesure l'impact de chaque amélioration avec des chiffres clairs.</p>
                 </div>
             </div>
+
+            <div class="extra-skills-grid">
+                <div class="extra-card">
+                    <h4><i class="fas fa-user-check"></i> Soft Skills</h4>
+                    <div class="extra-pills">
+                        <span>Écoute active</span>
+                        <span>Leadership</span>
+                        <span>Rigueur & organisation</span>
+                        <span>Esprit analytique</span>
+                        <span>Travail en équipe</span>
+                        <span>Gestion du changement</span>
+                    </div>
+                </div>
+                <div class="extra-card">
+                    <h4><i class="fas fa-heart"></i> Centres d'intérêt</h4>
+                    <div class="extra-pills">
+                        <span>📚 Lecture</span>
+                        <span>⚽ Football</span>
+                        <span>📰 Actualités</span>
+                        <span>🚀 Entrepreneuriat</span>
+                        <span>🤖 IA & Innovation</span>
+                    </div>
+                </div>
+                <div class="extra-card">
+                    <h4><i class="fas fa-certificate"></i> Certifications</h4>
+                    <div class="extra-pills">
+                        <span>🏅 Bootcamp Entrepreneur (2024)</span>
+                        <span>🎓 Mastère MBU — IFAG (2026)</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- PROJETS (untouched) -->
+        <!-- PROJETS -->
         <section id="projets" class="section">
             <h3>Mes Réalisations Clés</h3>
             <div class="projects-grid">
-
                 <article class="project-card">
                     <img src="image-mymir.jpg" alt="Capture d'écran de MyMir">
                     <h4>MyMír — SaaS d'Analyse d'Appels d'Offres</h4>
@@ -114,7 +153,6 @@
                     <a href="https://mymir-react.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Démo Live</a>
                     <a href="https://github.com/kifouliw-hash" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                 </article>
-
                 <article class="project-card">
                     <img src="image-kwiksend.jpg" alt="Capture d'écran de KwikSend">
                     <h4>KwikSend — Transfert d'Argent Afrique–Europe</h4>
@@ -123,7 +161,6 @@
                     <a href="https://kwiksend-v2.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Démo Live</a>
                     <a href="https://github.com/kifouliw-hash" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                 </article>
-
                 <article class="project-card">
                     <img src="image-spiritpay.jpg" alt="Capture d'écran de SpiritPay">
                     <h4>SpiritPay — Passerelle de Paiement Universelle</h4>
@@ -132,15 +169,13 @@
                     <a href="https://spiritpay-app-1.onrender.com/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Démo Live</a>
                     <a href="https://github.com/kifouliw-hash" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
                 </article>
-
                 <article class="project-card">
-                    <div style="height: 200px; background: #F5F5F7; display: flex; align-items: center; justify-content: center;"><i class="fas fa-microchip fa-4x" style="color: #0071E3; opacity: 0.4;"></i></div>
+                    <div style="height:200px;background:#F5F5F7;display:flex;align-items:center;justify-content:center;"><i class="fas fa-microchip fa-4x" style="color:#0071E3;opacity:0.35;"></i></div>
                     <h4>Automatisation VBA & PowerQuery</h4>
-                    <p>Moteurs VBA pour harmoniser 7+ formats de devis fournisseurs différents (Dispatcher multi-clients) et tableaux de bord logistiques automatisés.</p>
+                    <p>Moteurs VBA pour harmoniser 7+ formats de devis fournisseurs (Dispatcher multi-clients) et tableaux de bord logistiques automatisés.</p>
                     <p class="technologies">VBA Excel avancé · PowerQuery · Harmonisation données</p>
                     <a href="https://www.linkedin.com/in/williams-kifouli-3199871aa/" target="_blank" class="project-link"><i class="fab fa-linkedin"></i> Voir sur LinkedIn</a>
                 </article>
-
                 <article class="project-card">
                     <img src="image-sogal-expert.jpg" alt="Chatbot SOGAL Expert">
                     <h4>SOGAL Expert — Assistant IA Métier</h4>
@@ -148,32 +183,71 @@
                     <p class="technologies">Copilot Studio · Microsoft Teams · IA Générative</p>
                     <a href="https://www.linkedin.com/in/williams-kifouli-3199871aa/" target="_blank" class="project-link"><i class="fab fa-linkedin"></i> Voir sur LinkedIn</a>
                 </article>
-
             </div>
         </section>
 
-        <!-- EXPÉRIENCE + FORMATION -->
+        <!-- RÉSULTATS -->
+        <section id="resultats" class="section section--dark">
+            <h3>Résultats Mesurables</h3>
+            <p class="section-subtitle">Des chiffres concrets issus de mes missions en entreprise</p>
+            <div class="results-grid">
+                <div class="result-card">
+                    <span class="result-num">−85%</span>
+                    <span class="result-label">Temps de traitement des commandes</span>
+                    <span class="result-detail">15 min → 2 min · SOGAL</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">−80%</span>
+                    <span class="result-label">Taux d'erreur de saisie</span>
+                    <span class="result-detail">10% → 2% via IA · SOGAL</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">19</span>
+                    <span class="result-label">Collaborateurs formés au chatbot IA</span>
+                    <span class="result-detail">Sur 4 services · SOGAL</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">+15%</span>
+                    <span class="result-label">Taux de conversion des devis</span>
+                    <span class="result-detail">Suivi commercial · COMETI</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">−25%</span>
+                    <span class="result-label">Erreurs bases de données clients</span>
+                    <span class="result-detail">Optimisation CRM · COMETI</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">−30%</span>
+                    <span class="result-label">Erreurs d'inventaire</span>
+                    <span class="result-detail">VBA Excel · AELELEC</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-num">−20%</span>
+                    <span class="result-label">Retards de paiement</span>
+                    <span class="result-detail">Facturation · CFA-FC</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPÉRIENCE & FORMATION -->
         <section id="experience" class="section">
             <h3>Parcours</h3>
-
             <div class="timeline-wrapper">
 
-                <!-- COLONNE GAUCHE : EXPÉRIENCES -->
                 <div class="timeline-col">
                     <h4 class="timeline-col-title"><i class="fas fa-briefcase"></i> Expériences</h4>
                     <div class="timeline">
 
                         <div class="timeline-item timeline-item--current">
-                            <div class="timeline-item-header">
-                                <span class="timeline-badge">Maintenant</span>
-                                <h5>Chargé de Projets Digitaux</h5>
-                                <p class="timeline-company">Établissements SOGAL · Alternance</p>
-                                <p class="date">Sept. 2025 — Aujourd'hui</p>
-                            </div>
+                            <span class="timeline-badge">Poste actuel</span>
+                            <h5>Chargé de Projets Digitaux</h5>
+                            <p class="timeline-company">Établissements SOGAL</p>
+                            <p class="date">Sept. 2025 — Aujourd'hui · Alternance</p>
                             <ul>
-                                <li>Déploiement de SOGAL Expert, un chatbot IA métier utilisé par 19 collaborateurs sur 4 services (Teams + Desktop)</li>
-                                <li>Automatisation des commandes VBA/PowerQuery : traitement réduit de 15 min à 2 min (−85%)</li>
-                                <li>Élimination des erreurs de saisie via IA (−80%), tableaux de bord KPI automatisés</li>
+                                <li>Déploiement de SOGAL Expert, chatbot IA Teams — 19 utilisateurs sur 4 services</li>
+                                <li>Automatisation VBA/PowerQuery : 15 min → 2 min (−85%)</li>
+                                <li>Élimination des erreurs de saisie via IA (−80%)</li>
+                                <li>Formation des collaborateurs à Power Automate & AI Builder</li>
                             </ul>
                             <div class="timeline-results">
                                 <span>−85% temps</span>
@@ -183,85 +257,71 @@
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>Gestionnaire Commercial</h5>
-                                <p class="timeline-company">AELELEC · Alternance</p>
-                                <p class="date">Nov. — Déc. 2024</p>
-                            </div>
+                            <h5>Gestionnaire Commercial</h5>
+                            <p class="timeline-company">AELELEC — Électricien · Angers</p>
+                            <p class="date">Nov. — Déc. 2024 · Alternance</p>
                             <ul>
-                                <li>Création d'outils de gestion de stock VBA, réduisant les erreurs d'inventaire de 30%</li>
-                                <li>Suivi des devis et chantiers, analyse du marché de l'électricité</li>
+                                <li>Création d'outils de gestion de stock VBA (−30% erreurs)</li>
+                                <li>Suivi des devis et chantiers, analyse marché électricité</li>
                             </ul>
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>Assistant Commercial</h5>
-                                <p class="timeline-company">COMETI Groupe · Alternance</p>
-                                <p class="date">Sept. 2023 — Sept. 2024</p>
-                            </div>
+                            <h5>Assistant Commercial</h5>
+                            <p class="timeline-company">COMETI Groupe</p>
+                            <p class="date">Sept. 2023 — Sept. 2024 · Alternance</p>
                             <ul>
-                                <li>+15% de taux de conversion via un suivi rigoureux des devis clients</li>
-                                <li>−25% d'erreurs sur les bases de données clients</li>
-                                <li>−20% de retards de paiement grâce à l'optimisation de la facturation</li>
+                                <li>+15% taux de conversion des devis clients</li>
+                                <li>−25% erreurs bases de données clients</li>
+                                <li>Optimisation relation client et suivi commercial</li>
                             </ul>
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>Gestionnaire Comptable</h5>
-                                <p class="timeline-company">CFA-FC Métiers de nos Territoires · Alternance</p>
-                                <p class="date">Sept. 2022 — Juil. 2023</p>
-                            </div>
+                            <h5>Gestionnaire Comptable</h5>
+                            <p class="timeline-company">CFA-FC Métiers de nos Territoires</p>
+                            <p class="date">Sept. 2022 — Juil. 2023 · Alternance</p>
                             <ul>
-                                <li>Gestion comptable fournisseurs et facturation des formations</li>
+                                <li>Gestion comptable fournisseurs, facturation des formations</li>
                                 <li>Création de plans de financement étudiants</li>
+                                <li>−20% de retards de paiement</li>
                             </ul>
                         </div>
 
                     </div>
                 </div>
 
-                <!-- COLONNE DROITE : FORMATIONS -->
                 <div class="timeline-col">
                     <h4 class="timeline-col-title"><i class="fas fa-graduation-cap"></i> Formations</h4>
                     <div class="timeline">
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <span class="timeline-badge timeline-badge--edu">En cours</span>
-                                <h5>Mastère Manager de Business Unit</h5>
-                                <p class="timeline-company">IFAG Angers</p>
-                                <p class="date">Oct. 2024 — Juin 2026</p>
-                            </div>
+                            <span class="timeline-badge timeline-badge--edu">En cours</span>
+                            <h5>Mastère Manager de Business Unit</h5>
+                            <p class="timeline-company">IFAG Angers</p>
+                            <p class="date">Oct. 2024 — Juin 2026</p>
                             <p class="timeline-desc">Gestion stratégique, transformation digitale, management d'équipe et pilotage de la performance.</p>
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>Bachelor Responsable d'Activité</h5>
-                                <p class="timeline-company">IFAG Angers</p>
-                                <p class="date">Sept. 2023 — Juin 2024</p>
-                            </div>
+                            <h5>Bachelor Responsable d'Activité</h5>
+                            <p class="timeline-company">IFAG Angers</p>
+                            <p class="date">Sept. 2023 — Juin 2024</p>
                             <p class="timeline-desc">Analyse de performance, coordination d'équipes commerciales et opérationnelles.</p>
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>BTS Gestion de la PME</h5>
-                                <p class="timeline-company">ESPL Angers</p>
-                                <p class="date">Août 2021 — Mai 2023</p>
-                            </div>
+                            <h5>BTS Gestion de la PME</h5>
+                            <p class="timeline-company">ESPL Angers</p>
+                            <p class="date">Août 2021 — Mai 2023</p>
                             <p class="timeline-desc">Gestion administrative, comptabilité, relation client et outils de gestion pour PME.</p>
                         </div>
 
                         <div class="timeline-item">
-                            <div class="timeline-item-header">
-                                <h5>Bootcamp Entrepreneur</h5>
-                                <p class="timeline-company">Créer son entreprise</p>
-                                <p class="date">2024</p>
-                            </div>
-                            <p class="timeline-desc">Certification entrepreneuriat : business model, go-to-market, financement.</p>
+                            <h5>Bootcamp Entrepreneur</h5>
+                            <p class="timeline-company">Créer son entreprise</p>
+                            <p class="date">2024 · Certification</p>
+                            <p class="timeline-desc">Business model, go-to-market et financement de projets entrepreneuriaux.</p>
                         </div>
 
                     </div>
@@ -272,20 +332,78 @@
 
     </main>
 
-    <!-- FOOTER / CONTACT -->
     <footer id="contact">
         <div class="footer-inner">
             <h3>Travaillons ensemble</h3>
-            <p>Disponible pour un CDI en gestion de projets digitaux, RevOps, ou transformation IA. Basé à Angers, ouvert à Nantes et Paris.</p>
+            <p>Disponible pour un CDI en gestion de projets digitaux, RevOps ou transformation IA.<br>Basé à Angers — ouvert à Nantes, Paris et au télétravail.</p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/williams-kifouli-3199871aa/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/kifouliw-hash" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                 <a href="mailto:kifouliw@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-contact-info">
+                <span><i class="fas fa-phone"></i> +33 7 52 76 04 08</span>
+                <span><i class="fas fa-envelope"></i> kifouliw@gmail.com</span>
             </div>
             <p class="footer-copy">© 2025 Williams Kifouli · Angers, France</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // === HERO CANVAS — orbs gradient animés ===
+    (function() {
+        const canvas = document.getElementById('hero-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+
+        function resize() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const orbs = [
+            { x: 0.15, y: 0.25, r: 0.40, color: [0,113,227],   alpha: 0.11, speed: 0.00014, phase: 0 },
+            { x: 0.80, y: 0.65, r: 0.32, color: [88,86,214],   alpha: 0.09, speed: 0.00011, phase: 1.8 },
+            { x: 0.50, y: 0.85, r: 0.28, color: [52,199,89],   alpha: 0.07, speed: 0.00017, phase: 3.2 },
+            { x: 0.88, y: 0.12, r: 0.22, color: [0,113,227],   alpha: 0.08, speed: 0.00015, phase: 0.9 },
+        ];
+
+        function draw(ts) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            const w = canvas.width, h = canvas.height;
+            orbs.forEach(o => {
+                const ox = (o.x + Math.sin(ts * o.speed + o.phase) * 0.14) * w;
+                const oy = (o.y + Math.cos(ts * o.speed + o.phase * 0.6) * 0.11) * h;
+                const r  = o.r * Math.min(w, h);
+                const g  = ctx.createRadialGradient(ox, oy, 0, ox, oy, r);
+                g.addColorStop(0, `rgba(${o.color.join(',')},${o.alpha})`);
+                g.addColorStop(1, `rgba(${o.color.join(',')},0)`);
+                ctx.beginPath();
+                ctx.arc(ox, oy, r, 0, Math.PI * 2);
+                ctx.fillStyle = g;
+                ctx.fill();
+            });
+            requestAnimationFrame(draw);
+        }
+        requestAnimationFrame(draw);
+    })();
+
+    // === SCROLL REVEAL ===
+    (function() {
+        const items = document.querySelectorAll('.skill-card, .result-card, .timeline-item, .project-card, .extra-card');
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    obs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        items.forEach(el => { el.classList.add('reveal'); obs.observe(el); });
+    })();
+    </script>
 </body>
 </html>
