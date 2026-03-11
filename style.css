@@ -505,6 +505,22 @@ footer > .footer-inner > p { font-size:.9375rem; color:var(--text-secondary); ma
 .results-grid .result-card:nth-child(6) { transition-delay:.25s; }
 .results-grid .result-card:nth-child(7) { transition-delay:.30s; }
 
+/* Flow image — centrage vertical */
+.project-card-flow-img {
+    height: 200px;
+    background: #F5F5F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.project-card-flow-img img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    padding: 12px;
+}
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .hero { padding:100px 20px 80px; min-height:auto; }
